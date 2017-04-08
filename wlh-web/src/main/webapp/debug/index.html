@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>测试</title>
+	<script type="text/javascript" src="jquery-1.12.0.min.js"></script>
+	<style>
+		body{
+			font-family: "Microsoft YaHei" ! important;
+			background-color: white;
+		}
+		select{
+			height: 30px;
+			width: 807px;
+		}
+		input{
+			height: 26px;
+			width: 807px;
+		}
+		label{
+			display: block;
+		}
+		textarea{
+			width:800px;
+			height:300px
+		}
+		button{
+			padding: 8px;
+		}
+		.contanier{
+			display: block;
+			width: 800px;
+			height: 200px;
+			border: 1px solid #999;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<label>上报路径:</label>
+		<select id="report_path">
+			<option value="/api/user/login.ajax">登录接口</option>
+			<option value="/api/user/logout.ajax">注销接口</option>
+			<option value="/api/menu/getSite.ajax">获取站点接口</option>
+			<option value="/api/apply/apply.ajax">订阅申请接口</option>
+			<option value="/api/apply/remove.ajax">删除订阅接口</option>
+			<option value="/api/apply/mine.ajax">我的订阅列表接口</option>
+			<option value="/api/apply/events.ajax">订阅元素列表接口</option>
+			<option value="/api/subscription/new.ajax">添加收藏接口</option>
+			<option value="/api/subscription/remove.ajax">取消收藏接口</option>
+			<option value="/api/subscription/mine.ajax">我的收藏列表接口</option>
+			<option value="/api/element/getElementTrend.ajax">获取折线图接口</option>
+			<option value="/api/element/getElementAgg.ajax">获取元素汇总接口</option>
+		</select>
+	</div>
+	<div>
+		<label>请求内容:</label>
+		<textarea id="body"></textarea>
+	</div>
+	
+	<div>
+		<button id="submit">提交</button>
+	</div>
+	<label>返回内容:</label>
+	<div id="response" class="contanier">
+		
+	</div>
+	<script type="text/javascript">
+		$("#submit").on('click', function(){
+			var postBody = $('#body').val();
+			var url = $('#report_path').val();
+			$.ajax({
+				url : "/debug",
+				data : {
+					"l" : postBody,
+					"url": url
+				},
+				success : function(txt){
+					$('#response').html(JSON.stringify(txt));
+				}
+			});
+		});
+	</script>
+</body>
+</html>
