@@ -1,7 +1,6 @@
 package com.jd.common.utils;
 
 import com.alibaba.fastjson.JSON;
-import com.jd.common.util.StringUtils;
 
 import java.sql.Timestamp;
 import java.text.DateFormat;
@@ -493,25 +492,6 @@ public class DateUtils {
 	        return result;
 	}
 
-	/**
-	 * 判断某个日期是否是某种格式
-	 * @param date     日期字符串
-	 * @param format   日期格式，如“yyyy-MM-dd”
-	 * @return
-	 */
-	public static boolean isValidOfDate(String date, String format) {
-		if (StringUtils.isEmpty(date) || StringUtils.isEmpty(format) ) {
-			return false;
-		}
-		DateFormat df = new SimpleDateFormat(format);
-		try {
-			df.parse(date);
-		} catch (ParseException e) {
-			e.printStackTrace();
-			return false;
-		}
-		return true;
-	}
 	
 	public static List<String> getIndexHoursToNow(String index){
 		List<String> hoursIndex= new ArrayList<String>();

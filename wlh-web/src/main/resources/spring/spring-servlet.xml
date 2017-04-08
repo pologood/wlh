@@ -49,19 +49,7 @@
 			expression="org.springframework.stereotype.Service" />
 	</context:component-scan>
 	<mvc:interceptors>
-		<mvc:interceptor>
-			 <mvc:mapping path="/**"/>
-		     <bean id="springSSOInterceptor" class="com.jd.common.springmvc.interceptor.SpringSSOInterceptor" init-method="initialize">
-			     <property name="appDomainName" value="${webapp.domain.name}"/>
-			     <property name="appHomeUrl" value="http://${webapp.domain.name}/"/>
-			     <property name="loginUrl" value="${login.address}"/>
-			     <property name="ssoDomainName" value="${sso.auth.cookie.domain}"/>
-			     <property name="excludePath" value="${sso.exclude.path}"/>
-			     <property name="ssoService" ref="ssoService"/>
-		     </bean>
-		</mvc:interceptor>
         <bean class="com.jd.web.interceptor.TimeInterceptor" />
-		<bean class="com.jd.web.interceptor.LoginHandlerInterceptor" />
 	</mvc:interceptors>
 		 
 	<bean id="viewResolver"
