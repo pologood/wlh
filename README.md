@@ -1,6 +1,6 @@
 # wlh
 往来慧商城
-1.支付接口对接有赞的支付服务，避税
+1.支付接口对接有赞的支付服务
 
 2.内容：销售中石油加油卡，每人可以有多个卡，可以给某个卡充值
 
@@ -10,6 +10,11 @@
 
 
 git地址：https://github.com/wangshuxing123/wlh
+
+
+云服务器管理页面：https://console.qcloud.com/cvm/overview
+云服务器：root/wsx123456
+
 
 
 其他相关资料：
