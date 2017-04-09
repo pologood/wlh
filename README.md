@@ -29,3 +29,9 @@ git地址：https://github.com/wangshuxing123/wlh
 1.修改server。xml80端口：
 2.关闭nginx：，
 3.启动：export/Domains/xionganfamily.com.cn/server1/bin/start.sh
+
+
+接入成功信息：
+AppSecret已生成，本页面关闭后，公众平台将不再储存和显示AppSecret，请妥善保存。
+AppID：wxfc6f0e9d4ede7c71
+AppSecret：69c3cac94912c47f4624fa6407006a99
