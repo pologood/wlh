@@ -23,3 +23,9 @@ git地址：https://github.com/wangshuxing123/wlh
 公众平台：https://mp.weixin.qq.com/advanced/selfmenu?action=index&t=advanced/menu-setting&token=1248339586&lang=zh_CN
 
 公众号wiki：https://mp.weixin.qq.com/wiki
+
+
+启动方式：开发者模式必须要80端口 (域名未开通前：不用反向代理)
+1.修改server。xml80端口：
+2.关闭nginx：，
+3.启动：export/Domains/xionganfamily.com.cn/server1/bin/start.sh

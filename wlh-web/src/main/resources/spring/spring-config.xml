@@ -41,7 +41,5 @@
     </bean>
 
     <import resource="spring-common.xml"/>
-    <import resource="spring-config-saf.xml"/>
     <import resource="spring-dao.xml"/>
-    <import resource="spring-service.xml"/>
 </beans>

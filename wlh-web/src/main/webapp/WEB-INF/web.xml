@@ -95,7 +95,7 @@
     </session-config>
 
 	<welcome-file-list>
-        <welcome-file>/tof/index.html</welcome-file>
+        <welcome-file>/debug/index.html</welcome-file>
     </welcome-file-list>
 
 </web-app>
