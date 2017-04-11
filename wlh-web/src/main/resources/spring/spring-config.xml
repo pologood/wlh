@@ -33,8 +33,6 @@
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">
             <list>
-                <value>classpath:meridian.properties</value>
-                <value>classpath:syslogin.properties</value>
                 <value>classpath:important.properties</value>
             </list>
         </property>
