@@ -6,7 +6,7 @@ import javax.servlet.ServletContextListener;
 import org.springframework.util.StringUtils;
 
 import com.jd.common.enums.Constants;
-import com.jd.common.utils.WeixinMessageUtil;
+import com.jd.common.utils.WeixinAPIUtil;
 import com.jd.model.base.Token;
 import com.jd.model.token.GeneralToken;
 
@@ -19,9 +19,11 @@ public class ContextListener implements ServletContextListener {
     public void contextInitialized(ServletContextEvent sce) {  
         String appid = Constants.WX_APPID;  
         String secret = Constants.WX_APPSECRET;  
-        GeneralToken gt = WeixinMessageUtil.getToken(appid, secret);  
+        GeneralToken gt = WeixinAPIUtil.getToken(appid, secret);  
         if(gt != null && !StringUtils.isEmpty(gt.getAccess_token())){  
-            Token.getInstance().setToken(gt.getAccess_token());  
+            Token.getInstance().setToken(gt.getAccess_token()); 
+            Token.getInstance().setAppId(appid);
+            Token.getInstance().setSecret(secret);
         }  
     }
 

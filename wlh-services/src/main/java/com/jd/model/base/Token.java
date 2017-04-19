@@ -6,7 +6,9 @@ package com.jd.model.base;
  */
 public class Token {
 	 private Token() {}  
-	    private  String token;  
+	    private  String token; 
+	    private  String appId;
+	    private  String secret;
 	    private static Token instance  = new Token();  
 	    public static Token getInstance() {  
 	        return instance;  
@@ -16,5 +18,18 @@ public class Token {
 	    }  
 	    public  void setToken(String token) {  
 	        this.token = token;  
-	    }  
+	    }
+		public String getAppId() {
+			return appId;
+		}
+		public void setAppId(String appId) {
+			this.appId = appId;
+		}
+		public String getSecret() {
+			return secret;
+		}
+		public void setSecret(String secret) {
+			this.secret = secret;
+		}  
+	    
 }
